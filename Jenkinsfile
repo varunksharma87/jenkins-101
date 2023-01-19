@@ -11,6 +11,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
+                pip install virtualenv
                 virtualenv my-venv
                 source my-venv/bin/activate
                 pip install --user -r requirements.txt
